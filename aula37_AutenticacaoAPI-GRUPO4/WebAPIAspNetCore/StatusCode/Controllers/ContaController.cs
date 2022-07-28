@@ -96,7 +96,8 @@ namespace StatusCode.Controllers
 
                 var chaveToken = TokenService.GerarChaveToken();
                 var usuarioEx = DbSistema.Usuario.Where(Usuario => Usuario.Nome == credencial.usuario && Usuario.Senha == credencial.senha).FirstOrDefault();
-                DbSistema.Usuario.Any();
+                usuarioEx.Senha = "";
+                
                 // 3.2. Retorno o Token.
                 return Ok(new { token = chaveToken , user = usuarioEx});
 
