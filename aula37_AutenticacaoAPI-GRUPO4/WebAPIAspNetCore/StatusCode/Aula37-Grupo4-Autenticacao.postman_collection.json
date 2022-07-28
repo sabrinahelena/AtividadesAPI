@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "567d9cf2-c098-4407-a009-e36eccfeb922",
+		"name": "Aula37-Grupo4-Autenticacao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20767491"
+	},
+	"item": [
+		{
+			"name": "Criar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 2,\r\n  \"nome\": \"hugo\",\r\n  \"sobrenome\": \"helena\",\r\n  \"senha\": \"123\",\r\n  \"cpf\": \"232423\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/api/Conta/CriarUsuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"Conta",
+						"CriarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticar Usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuario\": \"hugo\",\r\n  \"senha\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/api/Conta/Autenticar",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"Conta",
+						"Autenticar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de Usuário",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2NTkwMzk1NzgsImV4cCI6MTY1OTA0MzE3OCwiaWF0IjoxNjU5MDM5NTc4fQ.YGypwWfv5H3FwXDrm-0LeoYhb0UyszDn7niFxrGw7Q4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7044/api/Conta/ListaUsuarios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"Conta",
+						"ListaUsuarios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
